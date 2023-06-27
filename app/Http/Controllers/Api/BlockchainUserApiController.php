@@ -19,19 +19,19 @@ class BlockchainUserApiController extends Controller
     {
         $input = $request->all();
 
-    	$validator = Validator::make($input, [
+        $validator = Validator::make($input, [
             'user_address' => 'required',
             'token_sale' => 'required',
             'round' => 'required'
         ]);
  
         if ($validator->fails()) {
-        	$data = [
-	    		'status' => false,
-	    		'message' => $validator->errors()->first()
-	    	];
+            $data = [
+                'status' => false,
+                'message' => $validator->errors()->first()
+            ];
 
-        	return response()->json($data, 403);
+            return response()->json($data, 403);
         }
         
         $add_user = new BlockchainUser();
@@ -645,6 +645,8 @@ class BlockchainUserApiController extends Controller
                 ->whereYear('created_at',Carbon::now()->format('Y'))
                 ->get();
                 
+                // return $usersNew;
+                
                 $int = 0;
                 foreach($usersNew as $key => $value){
                     // return $value;
@@ -875,6 +877,66 @@ class BlockchainUserApiController extends Controller
                         array_push($returnData1,$total_eth);
                     }
                 }
+            }
+            
+            if(empty($jan)){
+                array_splice($returnData, 0, 0, 0);
+                array_splice($returnData1, 0, 0, 0);
+            }
+            
+            if(empty($feb)){
+                array_splice($returnData, 1, 0, 0);
+                array_splice($returnData1, 1, 0, 0);
+            }
+            
+            if(empty($mar)){
+                array_splice($returnData, 2, 0, 0);
+                array_splice($returnData1, 2, 0, 0);
+            }
+            
+            if(empty($apr)){
+                array_splice($returnData, 3, 0, 0);
+                array_splice($returnData1, 3, 0, 0);
+            }
+            
+            if(empty($may)){
+                array_splice($returnData, 4, 0, 0);
+                array_splice($returnData1, 4, 0, 0);
+            }
+            
+            if(empty($jun)){
+                array_splice($returnData, 5, 0, 0);
+                array_splice($returnData1, 5, 0, 0);
+            }
+            
+            if(empty($jul)){
+                array_splice($returnData, 6, 0, 0);
+                array_splice($returnData1, 6, 0, 0);
+            }
+            
+            if(empty($aug)){
+                array_splice($returnData, 7, 0, 0);
+                array_splice($returnData1, 7, 0, 0);
+            }
+            
+            if(empty($sep)){
+                array_splice($returnData, 8, 0, 0);
+                array_splice($returnData1, 8, 0, 0);
+            }
+            
+            if(empty($oct)){
+                array_splice($returnData, 9, 0, 0);
+                array_splice($returnData1, 9, 0, 0);
+            }
+            
+            if(empty($nov)){
+                array_splice($returnData, 10, 0, 0);
+                array_splice($returnData1, 10, 0, 0);
+            }
+            
+            if(empty($dec)){
+                array_splice($returnData, 11, 0, 0);
+                array_splice($returnData1, 11, 0, 0);
             }
             
             $arr = [
