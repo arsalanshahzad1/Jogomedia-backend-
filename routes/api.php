@@ -28,4 +28,5 @@ Route::controller(BlockchainUserApiController::class)->group(function () {
     Route::post('/blockchain-user-data', 'blockchaninUserData');
     Route::get('/get-blockchain-users', 'getUserData');
     Route::get('/get-blockchain-users-month-vice', 'getUserDataMonthVice');
+    Route::get('/get-blockchain-users-month-vice2', 'getUserDataMonthVice2');
 });
