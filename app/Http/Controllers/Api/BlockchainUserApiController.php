@@ -604,7 +604,7 @@ class BlockchainUserApiController extends Controller
             return response()->json($data, 200);
         }
     }
-    
+
     public function getUserDataMonthVice(Request $request)
     {
     
@@ -618,6 +618,7 @@ class BlockchainUserApiController extends Controller
         ->get();
         $returnData=array();
         $returnData1=array();
+        $returnData2=array();
         
         if(!empty($users)){
             $jan = [];
@@ -759,6 +760,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                     else
                     if($int == 2){
@@ -770,6 +772,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                     else
                     if($int == 3){
@@ -781,6 +784,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                     else
                     if($int == 4){
@@ -792,6 +796,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                     else
                     if($int == 5){
@@ -803,6 +808,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                     else
                     if($int == 6){
@@ -814,6 +820,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }else
                     if($int == 7){
                         $jul = [
@@ -824,6 +831,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }else
                     if($int == 8){
                         $aug = [
@@ -834,6 +842,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                     else
                     if($int == 9){
@@ -845,6 +854,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }else
                     if($int == 10){
                         $oct = [
@@ -855,6 +865,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }else
                     if($int == 11){
                         $nov = [
@@ -865,6 +876,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }else
                     if($int == 12){
                         $dec = [
@@ -875,6 +887,7 @@ class BlockchainUserApiController extends Controller
                         ];
                         array_push($returnData,count($usersNew));
                         array_push($returnData1,$total_eth);
+                        array_push($returnData2,$total_usdt);
                     }
                 }
             }
@@ -882,61 +895,73 @@ class BlockchainUserApiController extends Controller
             if(empty($jan)){
                 array_splice($returnData, 0, 0, 0);
                 array_splice($returnData1, 0, 0, 0);
+                array_splice($returnData2, 0, 0, 0);
             }
             
             if(empty($feb)){
                 array_splice($returnData, 1, 0, 0);
                 array_splice($returnData1, 1, 0, 0);
+                array_splice($returnData2, 1, 0, 0);
             }
             
             if(empty($mar)){
                 array_splice($returnData, 2, 0, 0);
                 array_splice($returnData1, 2, 0, 0);
+                array_splice($returnData2, 2, 0, 0);
             }
             
             if(empty($apr)){
                 array_splice($returnData, 3, 0, 0);
                 array_splice($returnData1, 3, 0, 0);
+                array_splice($returnData2, 3, 0, 0);
             }
             
             if(empty($may)){
                 array_splice($returnData, 4, 0, 0);
                 array_splice($returnData1, 4, 0, 0);
+                array_splice($returnData2, 4, 0, 0);
             }
             
             if(empty($jun)){
                 array_splice($returnData, 5, 0, 0);
                 array_splice($returnData1, 5, 0, 0);
+                array_splice($returnData2, 5, 0, 0);
             }
             
             if(empty($jul)){
                 array_splice($returnData, 6, 0, 0);
                 array_splice($returnData1, 6, 0, 0);
+                array_splice($returnData2, 6, 0, 0);
             }
             
             if(empty($aug)){
                 array_splice($returnData, 7, 0, 0);
                 array_splice($returnData1, 7, 0, 0);
+                array_splice($returnData2, 7, 0, 0);
             }
             
             if(empty($sep)){
                 array_splice($returnData, 8, 0, 0);
                 array_splice($returnData1, 8, 0, 0);
+                array_splice($returnData2, 8, 0, 0);
             }
             
             if(empty($oct)){
                 array_splice($returnData, 9, 0, 0);
                 array_splice($returnData1, 9, 0, 0);
+                array_splice($returnData2, 9, 0, 0);
             }
             
             if(empty($nov)){
                 array_splice($returnData, 10, 0, 0);
                 array_splice($returnData1, 10, 0, 0);
+                array_splice($returnData2, 10, 0, 0);
             }
             
             if(empty($dec)){
                 array_splice($returnData, 11, 0, 0);
                 array_splice($returnData1, 11, 0, 0);
+                array_splice($returnData2, 11, 0, 0);
             }
             
             $arr = [
@@ -959,7 +984,8 @@ class BlockchainUserApiController extends Controller
                 'message' => "fetch all user information successfully!",
                 'data' => [
                     'total_users' => $returnData,
-                    'total_eth' => $returnData1
+                    'total_eth' => $returnData1,
+                    'total_usdt' => $returnData2
                 ]
             ];
 
@@ -974,8 +1000,10 @@ class BlockchainUserApiController extends Controller
             ->get();
             $returnData=array();
             $returnDataProfit=array();
+            $returnDataProfit2=array();
             $returnDataWeek=array();
             $returnDataProfitWeek=array();
+            $returnDataProfitWeek2=array();
         $monthsData = [];
         $weeksData = [];
         $daysData = [];
@@ -1001,17 +1029,22 @@ class BlockchainUserApiController extends Controller
         $i=1;
         $sumusers=0;
         $sumeth=0;
+        $sumusdt=0;
         foreach($daysData as $dayNew){
                 array_push($returnData,$dayNew['total_users']);
                 array_push($returnDataProfit,$dayNew['total_eth']??0);
+                array_push($returnDataProfit2,$dayNew['total_usdt']??0);
                 if($i%7==0){
-                     array_push($returnDataWeek,$sumusers);
-                array_push($returnDataProfitWeek,$sumeth);
+                    array_push($returnDataWeek,$sumusers);
+                    array_push($returnDataProfitWeek,$sumeth);
+                    array_push($returnDataProfitWeek2,$sumusdt);
                   $sumusers=0;
                   $sumeth=0;
+                  $sumusdt=0;
                 }
                   $sumusers+=$dayNew['total_users'];
                   $sumeth+=$dayNew['total_eth']??0;
+                  $sumusdt+=$dayNew['total_usdt']??0;
                 $i++;
             }
     
@@ -1021,14 +1054,441 @@ class BlockchainUserApiController extends Controller
             'data' => [
                 'UserDataBYWeek' => $returnDataWeek,
                 'EthDataByWeek' => $returnDataProfitWeek,
+                'UsdtDataByWeek' => $returnDataProfitWeek2,
                 'UserDataByDay' => $returnData,
-                'EthDataByDay'=>$returnDataProfit
+                'EthDataByDay'=>$returnDataProfit,
+                'UsdtDataByDay'=>$returnDataProfit2
             ]
         ];
     
         return response()->json($data, 200);
     }
 }
+    
+//     public function getUserDataMonthVice(Request $request)
+//     {
+    
+//     if($request->has('all_months') || $request->all_months != null){
+        
+//         $users = DB::table('blockchain_users')
+//         ->selectRaw('month(created_at) month, count(*) count')
+//         ->groupby('month')
+//         ->orderBy('month', 'asc')
+//         ->whereYear('created_at',Carbon::now()->format('Y'))
+//         ->get();
+//         $returnData=array();
+//         $returnData1=array();
+        
+//         if(!empty($users)){
+//             $jan = [];
+//             $feb = [];
+//             $mar = [];
+//             $apr = [];
+//             $may = [];
+//             $jun = [];
+//             $jul = [];
+//             $aug = [];
+//             $sep = [];
+//             $oct = [];
+//             $nov = [];
+//             $dec = [];
+        
+//             foreach($users as $user){
+//                 $total_token = 0;
+//                 $total_eth = 0;
+//                 $total_usdt = 0;
+//                 $total_users = 0;
+            
+//                 $usersNew = DB::table('blockchain_users')
+//                 ->selectRaw('*,month(created_at) as month')
+//                 ->whereRaw('MONTH(created_at) = ?', [$user->month])
+//                 ->whereYear('created_at',Carbon::now()->format('Y'))
+//                 ->get();
+                
+//                 // return $usersNew;
+                
+//                 $int = 0;
+//                 foreach($usersNew as $key => $value){
+//                     // return $value;
+                    
+//                     if($value->month == 1){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 1;
+                        
+//                     }
+//                     else
+//                     if($value->month == 2){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 2;
+//                     }
+//                     else
+//                     if($value->month == 3){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 3;
+//                     }
+//                     else
+//                     if($value->month == 4){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 4;
+//                     }
+//                     else
+//                     if($value->month == 5){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 5;
+//                     }
+//                     else
+//                     if($value->month == 6){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 6;
+//                     }
+//                     else
+//                     if($value->month == 7){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 7;
+//                     }
+//                     else
+//                     if($value->month == 8){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 8;
+//                     }
+//                     else
+//                     if($value->month == 9){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 9;
+//                     }
+//                     else
+//                     if($value->month == 10){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 10;
+//                     }
+//                     else
+//                     if($value->month == 11){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 11;
+//                     }
+//                     else
+//                     if($value->month == 12){
+//                         $total_token = $total_token + (double)$value->token_sale;
+//                         $total_eth = $total_eth + (double)$value->eth_amount;
+//                         $total_usdt = $total_usdt + (double)$value->usdt_amount;
+                        
+//                         $int = 12;
+//                     }
+//                 }
+                
+//                 if($int != 0){
+//                     if($int == 1){
+//                         $jan = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                     else
+//                     if($int == 2){
+//                         $feb = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                     else
+//                     if($int == 3){
+//                         $mar = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                     else
+//                     if($int == 4){
+//                         $apr = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                     else
+//                     if($int == 5){
+//                         $may = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                     else
+//                     if($int == 6){
+//                         $jun = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }else
+//                     if($int == 7){
+//                         $jul = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }else
+//                     if($int == 8){
+//                         $aug = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                     else
+//                     if($int == 9){
+//                         $sep = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }else
+//                     if($int == 10){
+//                         $oct = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }else
+//                     if($int == 11){
+//                         $nov = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }else
+//                     if($int == 12){
+//                         $dec = [
+//                             'total_users' => count($usersNew),
+//                             'total_token_sale' => $total_token,
+//                             'total_eth_amount' => $total_eth,
+//                             'total_usdt_amount' => $total_usdt
+//                         ];
+//                         array_push($returnData,count($usersNew));
+//                         array_push($returnData1,$total_eth);
+//                     }
+//                 }
+//             }
+            
+//             if(empty($jan)){
+//                 array_splice($returnData, 0, 0, 0);
+//                 array_splice($returnData1, 0, 0, 0);
+//             }
+            
+//             if(empty($feb)){
+//                 array_splice($returnData, 1, 0, 0);
+//                 array_splice($returnData1, 1, 0, 0);
+//             }
+            
+//             if(empty($mar)){
+//                 array_splice($returnData, 2, 0, 0);
+//                 array_splice($returnData1, 2, 0, 0);
+//             }
+            
+//             if(empty($apr)){
+//                 array_splice($returnData, 3, 0, 0);
+//                 array_splice($returnData1, 3, 0, 0);
+//             }
+            
+//             if(empty($may)){
+//                 array_splice($returnData, 4, 0, 0);
+//                 array_splice($returnData1, 4, 0, 0);
+//             }
+            
+//             if(empty($jun)){
+//                 array_splice($returnData, 5, 0, 0);
+//                 array_splice($returnData1, 5, 0, 0);
+//             }
+            
+//             if(empty($jul)){
+//                 array_splice($returnData, 6, 0, 0);
+//                 array_splice($returnData1, 6, 0, 0);
+//             }
+            
+//             if(empty($aug)){
+//                 array_splice($returnData, 7, 0, 0);
+//                 array_splice($returnData1, 7, 0, 0);
+//             }
+            
+//             if(empty($sep)){
+//                 array_splice($returnData, 8, 0, 0);
+//                 array_splice($returnData1, 8, 0, 0);
+//             }
+            
+//             if(empty($oct)){
+//                 array_splice($returnData, 9, 0, 0);
+//                 array_splice($returnData1, 9, 0, 0);
+//             }
+            
+//             if(empty($nov)){
+//                 array_splice($returnData, 10, 0, 0);
+//                 array_splice($returnData1, 10, 0, 0);
+//             }
+            
+//             if(empty($dec)){
+//                 array_splice($returnData, 11, 0, 0);
+//                 array_splice($returnData1, 11, 0, 0);
+//             }
+            
+//             $arr = [
+//                 'January' => $jan,
+//                 'February' => $feb,
+//                 'March' => $mar,
+//                 'April' => $apr,
+//                 'May' => $may,
+//                 'June' => $jun,
+//                 'July' => $jul,
+//                 'August' => $aug,
+//                 'September' => $sep,
+//                 'October' => $oct,
+//                 'November' => $nov,
+//                 'December' => $dec
+//             ];
+            
+//             $data = [
+//                 'status' => true,
+//                 'message' => "fetch all user information successfully!",
+//                 'data' => [
+//                     'total_users' => $returnData,
+//                     'total_eth' => $returnData1
+//                 ]
+//             ];
+
+//             return response()->json($data, 200);
+//         }
+//     }else{
+        
+//         $users = DB::table('blockchain_users')
+//             ->selectRaw('user_address, ifnull(sum(token_sale),0) as total_token, ifnull(sum(eth_amount),0) as total_eth, ifnull(sum(usdt_amount),0) as total_usdt')
+//             ->whereMonth('created_at', Carbon::now()->month)
+//             ->groupBy('user_address')
+//             ->get();
+//             $returnData=array();
+//             $returnDataProfit=array();
+//             $returnDataWeek=array();
+//             $returnDataProfitWeek=array();
+//         $monthsData = [];
+//         $weeksData = [];
+//         $daysData = [];
+    
+//         foreach ($users as $user) {
+//             $monthNumber = Carbon::now()->month;
+//             $monthName = Carbon::now()->format('F');
+    
+//             // Get month data
+//             $monthData = $this->getUserDataByMonth($monthNumber);
+//             $monthsData = $monthData;
+    
+//             // Get week data for the specific month
+//             $weekData = $this->getUserDataByWeek($monthNumber);
+//             $weeksData = $weekData;
+    
+//             // Get day data for the specific month
+//             $dayData = $this->getUserDataByDay($monthNumber);
+            
+            
+//             $daysData = $dayData;
+//         }
+//         $i=1;
+//         $sumusers=0;
+//         $sumeth=0;
+//         foreach($daysData as $dayNew){
+//                 array_push($returnData,$dayNew['total_users']);
+//                 array_push($returnDataProfit,$dayNew['total_eth']??0);
+//                 if($i%7==0){
+//                      array_push($returnDataWeek,$sumusers);
+//                 array_push($returnDataProfitWeek,$sumeth);
+//                   $sumusers=0;
+//                   $sumeth=0;
+//                 }
+//                   $sumusers+=$dayNew['total_users'];
+//                   $sumeth+=$dayNew['total_eth']??0;
+//                 $i++;
+//             }
+    
+//         $data = [
+//             'status' => true,
+//             'message' => "Fetch all user information successfully!",
+//             'data' => [
+//                 'UserDataBYWeek' => $returnDataWeek,
+//                 'EthDataByWeek' => $returnDataProfitWeek,
+//                 'UserDataByDay' => $returnData,
+//                 'EthDataByDay'=>$returnDataProfit
+//             ]
+//         ];
+    
+//         return response()->json($data, 200);
+//     }
+// }
 
 public function getUserDataByMonth($monthNumber)
 {
